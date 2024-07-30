@@ -22,7 +22,7 @@ app.post('/convert', (req, res) => {
     }
 
     try {
-        const result = convertCurrency(fromCurrency, toCurrency, amount);
+        const result = convertCurrency(amount, fromCurrency, toCurrency);
         res.json(result);
     } catch (error) {
         res.status(400).json({ error: error.message });
