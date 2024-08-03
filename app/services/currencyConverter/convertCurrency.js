@@ -5,14 +5,14 @@ function convertCurrency(amount, fromCurrency, toCurrency) {
         throw new Error('Moeda Inválida');
     }
 
-    const montanteMoedaOrigem = amount / conversionRates[fromCurrency];
-    const montanteMoedaDestino = montanteMoedaOrigem * conversionRates[toCurrency];
+    const mountOriginCurrency = amount / conversionRates[fromCurrency];
+    const converted = mountOriginCurrency * conversionRates[toCurrency];
 
     return {
         fromCurrency,
         toCurrency,
         amount,
-        montanteMoedaDestino
+        converted
     };
 }
 
